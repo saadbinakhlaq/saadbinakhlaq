@@ -11,8 +11,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-
+gem 'haml', '~> 4.0.0'
 gem 'unicorn'
+
+# Bootstrap
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug'
@@ -25,4 +29,8 @@ group :development, :test do
 
   gem 'guard-rspec'
   gem 'guard-bundler'
+end
+
+group :development do
+  gem 'erb2haml'
 end

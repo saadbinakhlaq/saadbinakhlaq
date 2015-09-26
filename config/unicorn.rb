@@ -5,7 +5,8 @@ preload_app true
 
 before_fork do |_server, _worker|
   Signal.trap 'TERM' do
-    puts 'Unicorn  master intercepting TERM signal and sending itself QUIT instead'
+    puts 'Unicorn  master intercepting TERM signal and sending itself QUIT '\
+         'instead'
     Process.kill 'QUIT', Process.pid
   end
 
