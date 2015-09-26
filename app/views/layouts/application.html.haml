@@ -9,18 +9,19 @@
       = content_for?(:title) ? "#{yield :title} - " : ''
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
-    .container
-      - if content_for?(:title)
-        %hgroup.page-header
-          - if content_for?(:toolbar)
-            .pull-right
-              = yield :toolbar
-          = yield :title
+  %body{ class: controller_and_action_as_html_class_names }
+    = yield :navbar
+    .container#main{ role: 'main' }
+      .row
+        - if content_for?(:title)
+          %hgroup.page-header
+            - if content_for?(:toolbar)
+              .pull-right
+                = yield :toolbar
+            = yield :title
 
-      = render 'shared/flash.html.haml'
+        = render 'shared/flash.html.haml'
 
-      %article#main{ role: 'main' }
         = yield
 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true

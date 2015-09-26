@@ -1,0 +1,31 @@
+.controller-resumes {
+  &.action-show {
+    #basic {
+      text-align: center
+    }
+
+    .timeline-date {
+      font-style: italic;
+    }
+
+    .timeline-body {
+      margin-bottom: 35px;
+    }
+
+    #education .timeline-content {
+      margin-left: 26px;
+    }
+
+    #summary {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: solid black 0.5px;
+      font-style: italic;
+    }
+
+    #main {
+      margin-bottom: 200px;
+    }
+  }
+}

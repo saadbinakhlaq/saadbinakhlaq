@@ -1,0 +1,16 @@
+%nav.navbar#subnav{:role => "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#primary-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    #primary-navbar-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if request.path == root_path
+          %li.active= link_to 'Home', root_path
+        - else
+          %li= link_to 'Home', root_path
+        %li
+          %a{ href: 'http://saadbinakhlaq.svbtle.com/'} Blog

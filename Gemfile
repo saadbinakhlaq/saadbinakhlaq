@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'haml', '~> 4.0.0'
+gem 'haml-rails'
 gem 'unicorn'
 
 # Bootstrap

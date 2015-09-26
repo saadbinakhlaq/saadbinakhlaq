@@ -1,0 +1,61 @@
+%section#basic
+  %h1= @resume.fields['basics']['name']
+  %p= @resume.fields['basics']['label']
+  %p= @resume.fields['basics']['email']
+  %p= @resume.fields['basics']['phone']
+  %p= @resume.fields['basics']['website']
+  %section#languages
+    - @resume.fields['languages'].each do |language|
+      = "#{language['language']}: #{language['fluency']}"
+      %br
+  %section#skills
+    - @resume.fields['skills'].each do |skill|
+      %span.label.label-default= skill['name']
+      %br
+      - skill['keywords'].each do |keyword|
+        %span.label.label-default= keyword
+
+.row
+  #summary.col-md-6.col-md-offset-3
+    %p= @resume.fields['basics']['summary']
+.row
+  .col-md-4.col-sm-6
+    %h3 Work
+  .col-md-8.col-sm-6
+    %section#work
+      %ul.timeline
+        - @resume.fields['work'].each do |work|
+          %li
+            .timeline-content
+              .timeline-header.row
+                %p.col-md-8
+                  %span #{work['company']} (#{work['website']}) | #{work['position']}
+                %p.timeline-date.col-md-4
+                  %span #{work['startDate']} - #{work['endDate']}
+              .timeline-body
+                = work['summary']
+                - work['highlights'].each do |highlight|
+                  = highlight
+
+.row
+  .col-md-4.col-sm-6
+    %h3 Education
+  .col-md-8.col-sm-6
+    %section#education.timeline
+      - @resume.fields['education'].each do |education|
+        .timeline-content
+          .timeline-header
+            %p.col-md-8
+              %span= education['institution']
+            %p.timeline-date.col-md-4
+              %span #{education['startDate']} - #{education['endDate']}
+          .timeline-body
+            %p.col-md-12 Degree #{education['studyType']} #{education['area']}
+
+%section#interests
+  - @resume.fields['interests'].each do |interest|
+    = interest
+%section#references
+  - @resume.fields['references'].each do |reference|
+    = referece
+

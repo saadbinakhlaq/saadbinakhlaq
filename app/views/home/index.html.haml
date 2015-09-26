@@ -1,2 +1,4 @@
-%h1
-  Hello World
+= content_for :navbar do
+  = render 'shared/navbar.html.haml'
+
+%h1#welcome= "<WELCOME/>"
