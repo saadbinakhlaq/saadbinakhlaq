@@ -11,12 +11,19 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
 gem 'haml', '~> 4.0.0'
 gem 'unicorn'
 
 # Bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+
+gem 'devise'
+
+group :development do
+  gem 'pry-rails'
+end
 
 group :development, :test do
   gem 'byebug'
