@@ -1,7 +1,13 @@
 .controller-resumes {
   &.action-show {
+    #main {
+      padding-top: 90px;
+    }
+
     #basic {
-      text-align: center
+      text-align: center;
+      color: white;
+      opacity: 0.9;
     }
 
     .timeline-date {
@@ -22,10 +28,22 @@
       margin-bottom: 10px;
       border-bottom: solid black 0.5px;
       font-style: italic;
+      color: white;
     }
 
     #main {
       margin-bottom: 200px;
     }
+  }
+
+  #basic_background {
+    background: url(asset_path('images/hrdarkblue.jpg'));
+    background-size: 100% 400px;
+    background-position: center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 370px;
+    width: 100%;
   }
 }

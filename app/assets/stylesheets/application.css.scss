@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require_tree ./bootstrap_theme_css
  *= require_tree ./sass/app
  */
+ @import 'bootstrap_theme_css/bootstrap.min';
+ @import 'bootstrap_theme_css/styles';

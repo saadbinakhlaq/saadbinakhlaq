@@ -1,3 +1,4 @@
+%section#basic_background
 %section#basic
   %h1= @resume.fields['basics']['name']
   %p= @resume.fields['basics']['label']
@@ -11,7 +12,6 @@
   %section#skills
     - @resume.fields['skills'].each do |skill|
       %span.label.label-default= skill['name']
-      %br
       - skill['keywords'].each do |keyword|
         %span.label.label-default= keyword
 
@@ -19,8 +19,9 @@
   #summary.col-md-6.col-md-offset-3
     %p= @resume.fields['basics']['summary']
 .row
+  .social-003_twitter 
   .col-md-4.col-sm-6
-    %h3 Work
+    %h3.float_right Work
   .col-md-8.col-sm-6
     %section#work
       %ul.timeline
@@ -29,17 +30,23 @@
             .timeline-content
               .timeline-header.row
                 %p.col-md-8
-                  %span #{work['company']} (#{work['website']}) | #{work['position']}
+                  %span #{work['company']} (#{work['website']})
                 %p.timeline-date.col-md-4
                   %span #{work['startDate']} - #{work['endDate']}
+              .timeline-header.row
+                %p.col-md-8
+                  %span #{work['position']}
+                %p.timeline-date.col-md-4
+                  %span #{work['website']}
               .timeline-body
                 = work['summary']
-                - work['highlights'].each do |highlight|
-                  = highlight
+                %ul
+                  - work['highlights'].each do |highlight|
+                    %li= highlight
 
 .row
   .col-md-4.col-sm-6
-    %h3 Education
+    %h3.float_right Education
   .col-md-8.col-sm-6
     %section#education.timeline
       - @resume.fields['education'].each do |education|
@@ -50,7 +57,7 @@
             %p.timeline-date.col-md-4
               %span #{education['startDate']} - #{education['endDate']}
           .timeline-body
-            %p.col-md-12 Degree #{education['studyType']} #{education['area']}
+            %p.col-md-12 Degree: #{education['studyType']} #{education['area']}
 
 %section#interests
   - @resume.fields['interests'].each do |interest|

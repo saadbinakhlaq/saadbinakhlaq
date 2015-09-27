@@ -4,13 +4,6 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-
-  background: url(asset_path('images/hrdarkblue.jpg')) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white
 }
 
 p, ol, ul, td {
@@ -26,16 +19,11 @@ pre {
 }
 
 a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
+  color: #1ca8dd;
 
   &:hover {
     color: #000;
-    background: blue;
-    opacity: 0.3;
+    background: #1ca8dd;
   }
 }
 
