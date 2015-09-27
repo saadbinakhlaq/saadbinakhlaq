@@ -1,0 +1,22 @@
+.col-md-6.col-sm-6.col-md-offset-3
+  = form_for @resume, html: { class: 'form-horizontal', role: 'form' } do |f|
+    - if @resume.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@resume.errors.count, "error")
+          prohibited this resume from being saved:
+        %ul
+          - @resume.errors.full_messages.each do |message|
+            %li= message
+    .form-group
+      .field
+        = f.label :user_id
+        %br/
+        = f.text_field :user_id, class: 'form-control'
+      .field
+        = f.label :fields
+        %br/
+        = text_area_tag :fields, @resume.fields.to_json, class: 'form-control resume_fields'
+      .actions
+        = f.submit role: 'button', class: 'btn btn-success'
+.clear_float
