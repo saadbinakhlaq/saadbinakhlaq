@@ -1,5 +1,5 @@
 .col-md-6.col-sm-6.col-md-offset-3
-  = form_for @resume, html: { class: 'form-horizontal', role: 'form' } do |f|
+  = form_for @resume, url: admin_resume_path, html: { class: 'form-horizontal', role: 'form' } do |f|
     - if @resume.errors.any?
       #error_explanation
         %h2
