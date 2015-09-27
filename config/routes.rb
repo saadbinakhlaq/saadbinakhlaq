@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, except: [:sign_up]
   root to: 'home#index'
 
   resources :resumes, only: [:show]
