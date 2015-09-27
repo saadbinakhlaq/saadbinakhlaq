@@ -19,6 +19,7 @@ class ResumesController < ApplicationController
 
   # GET /resumes/1/edit
   def edit
+    @resume = Resume.find params[:id]
   end
 
   # POST /resumes
