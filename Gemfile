@@ -16,6 +16,8 @@ gem 'haml', '~> 4.0.0'
 gem 'haml-rails'
 gem 'unicorn'
 
+gem 'rails_12factor', group: :production
+
 # Bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
