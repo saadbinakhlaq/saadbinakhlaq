@@ -16,7 +16,7 @@
       .field
         = f.label :fields
         %br/
-        = text_area_tag :fields, @resume.fields.to_json, class: 'form-control resume_fields'
+        = text_area_tag 'resume[fields]', @resume.fields.to_json, class: 'form-control resume_fields'
       .actions
         = f.submit role: 'button', class: 'btn btn-success'
 .clear_float

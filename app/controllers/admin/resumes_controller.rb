@@ -29,6 +29,7 @@ class Admin::ResumesController < AdminController
   # PATCH/PUT /resumes/1.json
   def update
     @resume = Resume.joins(:user).find_by(users: {email: 'saad.18@gmail.com'})
+    puts "params #{resume_params}"
     respond_to do |format|
       if @resume.update(resume_params)
         format.html { redirect_to @resume, notice: 'Resume was successfully updated.' }
