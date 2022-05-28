@@ -1,9 +1,6 @@
 ### Hi there 👋 I am Saad
 I am a self-taught programmer with an interest in designing large scale distributed systems. I would love to connect 🙂
 
-* 🌱  I'm learning Elastic Search
-* 📖  I love to read blogs, opinions when I have the time!
-
 ## Tech
 
 ![Ruby](https://img.shields.io/badge/ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=000000)
